@@ -1,2 +1,0 @@
-const adminRouters = []
-const adminRouter = []
