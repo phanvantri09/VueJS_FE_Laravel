@@ -1,22 +1,29 @@
 <template>
-    <Header/>
-    <div class="container-fluid">
+    <Header />
+    <div class="container-fluid mt-3">
         <div class="row">
-            <div class="col-3 d-none d-sm-flex">
-                đay là side bar
+            <div class="col-3 d-sm-flex d-none ">
+                <a-list bordered style="width: 100%;">
+                    <TheMenu />
+                    <template #header>
+                        <div style="">SideBar</div>
+                    </template>
+                </a-list>
             </div>
             <div class="col-12 col-sm-9">
-                đay là conytent
+                <router-view></router-view>
             </div>
         </div>
     </div>
-    <router-view></router-view>
+    
 </template>
 <script>
 import Header from '../components/Header.vue'
+import TheMenu from '../components/TheMenu.vue'
 export default {
     components: {
-        Header
+        Header, 
+        TheMenu
     }
 }
 </script>
